@@ -1,5 +1,5 @@
 package Lab2;
-
+// Inserting Record in customers table using Annotations configuration
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;

@@ -1,5 +1,5 @@
 package Lab1;
-
+ // Inserting Record in customers table using XML configuration
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
