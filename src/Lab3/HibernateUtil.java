@@ -1,4 +1,4 @@
-package Lab2;
+package Lab3;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistry;
@@ -11,8 +11,7 @@ public class HibernateUtil {
 	static {
 		Configuration cfg = new Configuration();
 //		cfg = cfg.configure(); // By default it will pick hibernate.cfg.xml from src folder(/src/hibernate.cfg.xml)
-		cfg = cfg.configure("/Lab2/hibernate.cfg.xml"); // for MySql configuration and connection
-//		cfg = cfg.configure("/Lab2/hibernate-oracle.cfg.xml"); // for Oracle configuration and connection
+		cfg = cfg.configure("/Lab3/hibernate.cfg.xml");
 		StandardServiceRegistryBuilder ssrb = new StandardServiceRegistryBuilder();
 		StandardServiceRegistry ssr= ssrb.applySettings(cfg.getProperties()).build();
 		factory = cfg.buildSessionFactory(ssr);

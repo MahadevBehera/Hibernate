@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+       "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- <hibernate-mapping package="com.jlcindia.hibernate"> -->
+
+
+<hibernate-mapping package="Lab3">
+	<class name="Student" table="students" lazy="false">
+
+		<!-- P.K -->
+		<id name="sid" column="sid" type="int">
+			<generator class="increment"></generator>
+		</id>
+
+		<!-- Simple Type -->
+		<property name="sname" />
+		<property name="dob" />
+		<property name="qualification" column="quali" />
+
+		<!-- Array Type -->
+		<array name="courses" table="MyCourses">
+			<key column="sid" />
+			<index column="idx" />
+			<element column="courseName" type="string" />
+		</array>
+
+		<!-- Collection List Type -->
+		<list name="emails" table="Emails" lazy="false">
+			<key column="sid" />
+			<index column="idx" />
+			<element column="emailId" type="string" />
+		</list>
+
+		<!-- Collection List Type -->
+		<bag name="marks" table="Marks">
+			<key column="sid" />
+			<element column="marks" type="int" />
+		</bag>
+
+		<!-- Collection Set Type -->
+		<set name="phones" table="Phones">
+			<key column="sid" />
+			<element column="phone" type="long" />
+		</set>
+
+		<!-- Collection Map Type -->
+		<map name="refs" table="reference">
+			<key column="sid" />
+			<index column="rname" type="string" />
+			<element column="rphone" type="long" />
+		</map>
+	</class>
+</hibernate-mapping>
