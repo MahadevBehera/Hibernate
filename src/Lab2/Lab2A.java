@@ -14,6 +14,7 @@ public class Lab2A {
 			tx = session.beginTransaction();
 			Customer cust = new Customer("Mahadev", "mahadev@gmai.com", 900000L, "Kolkata", 23400.00);
 			session.save(cust);
+			//session.flush(); // Flushing Data to DB but not submitting commit to DB so no record will be inserted.
 			tx.commit();
 			session.close();
 		}catch(Exception e) {
