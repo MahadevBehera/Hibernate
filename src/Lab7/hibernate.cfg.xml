@@ -14,7 +14,7 @@
    	<property name="show_sql">true</property>
    	<property name="hibernate.hbm2ddl.auto">update</property>
    	<!-- <mapping resource="com/jlcindia/hibernate/Student.hbm.xml"/> -->
-   	<mapping resource="Lab5/Student.hbm.xml"/>
+   	<mapping resource="Lab7/Student.hbm.xml"/>
    	
    </session-factory>
    </hibernate-configuration>

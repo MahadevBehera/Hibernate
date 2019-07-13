@@ -14,7 +14,10 @@
    	<property name="show_sql">true</property>
    	<property name="hibernate.hbm2ddl.auto">update</property>
    	<!-- <mapping resource="com/jlcindia/hibernate/Student.hbm.xml"/> -->
-   	<mapping resource="Lab5/Student.hbm.xml"/>
-   	
+   	<mapping class="Lab6.Student"/>
+   	<mapping class="Lab6.CurrentStudent"/>
+   	<mapping class="Lab6.OldStudent"/>
+   	<mapping class="Lab6.WeekdayStudent"/>
+   	<mapping class="Lab6.WeekendStudent"/>
    </session-factory>
    </hibernate-configuration>

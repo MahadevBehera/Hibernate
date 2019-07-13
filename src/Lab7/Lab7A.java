@@ -1,10 +1,10 @@
-package Lab5;
+package Lab7;
 // Inheritance Mapping 
-// 1) Table Per Subclass Mapping using XML Configuration
-// Inserting Records in Students table and related tables which are inherited from student table using XML configuration
+// 2) Table Per Class Mapping using XML Configuration
+// Inserting Records in AllStudents table(only one table) and related classes which are inherited from Student class will go to same table using XML configuration
 import org.hibernate.*;
 
-public class Lab5A {
+public class Lab7A {
 
 	public static void main(String[] args) {
 		Transaction tx = null;
