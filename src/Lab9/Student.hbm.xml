@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+       "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- <hibernate-mapping package="com.jlcindia.hibernate"> -->
+
+
+<hibernate-mapping package="Lab9">
+	<class name="Student" table="students1">
+
+		<!-- P.K -->
+		<id name="sid" column="sid" type="int">
+			<generator class="increment"></generator>
+		</id>
+
+		<!-- Simple Type -->
+		<property name="sname" />
+		<property name="city" />
+		<property name="status" />
+		<property name="totalFee" type="double" />
+
+	</class>
+	<!-- CurrentStudent -->
+	<class name="CurrentStudent" table="CurrentStudent1">
+		<!-- P.K -->
+		<id name="sid" column="sid" type="int">
+			<generator class="increment"></generator>
+		</id>
+
+		<!-- Simple Type -->
+		<property name="sname" />
+		<property name="city" />
+		<property name="status" />
+		<property name="totalFee" type="double" />
+
+		<property name="feeBal" type="double" />
+		<property name="timings" />
+		<property name="branch" />
+	</class>
+	<!-- WeekdayStudent -->
+	<class name="WeekdayStudent" table="WeekdayStudent1">
+		<!-- P.K -->
+		<id name="sid" column="sid" type="int">
+			<generator class="increment"></generator>
+		</id>
+
+		<!-- Simple Type -->
+		<property name="sname" />
+		<property name="city" />
+		<property name="status" />
+		<property name="totalFee" type="double" />
+
+		<property name="feeBal" type="double" />
+		<property name="timings" />
+		<property name="branch" />
+
+		<property name="qualification" />
+		<property name="percentage" />
+		<property name="YOP" type="int" />
+	</class>
+
+	<!-- WeekendStudent -->
+	<class name="WeekendStudent" table="WeekendStudent1">
+		<!-- P.K -->
+		<id name="sid" column="sid" type="int">
+			<generator class="increment"></generator>
+		</id>
+
+		<!-- Simple Type -->
+		<property name="sname" />
+		<property name="city" />
+		<property name="status" />
+		<property name="totalFee" type="double" />
+
+		<property name="feeBal" type="double" />
+		<property name="timings" />
+		<property name="branch" />
+
+		<property name="wcompany" />
+		<property name="wcemail" />
+		<property name="wctc" type="double" />
+	</class>
+
+	<!-- OldStudent -->
+	<class name="OldStudent" table="OldStudent1">
+		<!-- P.K -->
+		<id name="sid" column="sid" type="int">
+			<generator class="increment"></generator>
+		</id>
+
+		<!-- Simple Type -->
+		<property name="sname" />
+		<property name="city" />
+		<property name="status" />
+		<property name="totalFee" type="double" />
+
+		<property name="ocompany" />
+		<property name="ocemail" />
+		<property name="octc" type="double" />
+	</class>
+
+</hibernate-mapping>
