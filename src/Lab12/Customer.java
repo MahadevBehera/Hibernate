@@ -19,7 +19,7 @@ public class Customer {
 	private long phone;
 
 	// Connection for Other Side (For One to One relation)
-	@OneToOne(cascade = CascadeType.All)
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "addId")
 	private Address address;
 
