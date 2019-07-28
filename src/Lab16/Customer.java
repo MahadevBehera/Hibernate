@@ -22,7 +22,7 @@ public class Customer {
 
 	// Connection for One Side (For One to Many relation)
 	@OneToMany(mappedBy = "customers")
-	//@JoinColumn(name = "cid") // If you want to set requests using customer like cust.setRequests(reqs); then F.K specification should be mentioned here and the @OneToMany should mark with (mappedBy = "customers") 
+	//@JoinColumn(name = "cid") // If you want to set requests using customer like cust.setRequests(reqs); then F.K specification should be mentioned here and the @OneToMany should not mark with (mappedBy = "customers") 
 	//@JoinColumn(name = "cid") OR @JoinColumn(name = "cid", referencedColumnName = "cid") *** This is for One-To-Many Uni-directional relation, we have to specify F.K here only for requests table ***
 	private Set<Request> requests;
 
