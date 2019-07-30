@@ -5,6 +5,8 @@ public class Customer {
 	private String cname;
 	private String email;
 	private long phone;
+	
+	// For version column (Hibernate will provide the value for this column automatically using Version Mapping)
 	private int version;
 	
 	public Customer() {

@@ -17,6 +17,7 @@ public class Customer {
 	private long phone;
 	
 	@Version
+	// For version column (Hibernate will provide the value for this column automatically using Version Mapping)
 	private int version;
 	
 	public Customer() {

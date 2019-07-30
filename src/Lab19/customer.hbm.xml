@@ -9,6 +9,7 @@
 		<id name="cid" column="cid" type="int">
 			<generator class="increment"></generator>
 		</id>
+		<!-- For version mapping, this mapping must be specified after the P.K (ID) specification -->
 		<version name="version" type="integer" column="version"></version>
 		<property name="cname"></property>
 		<property name="email" column="email"></property>
