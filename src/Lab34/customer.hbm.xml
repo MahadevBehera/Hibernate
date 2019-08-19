@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+       "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- <hibernate-mapping package="com.jlcindia.hibernate"> -->
+
+<hibernate-mapping package="Lab34">
+	<class name="Customer" table="customers">
+		<id name="cid" column="cid" type="int">
+			<generator class="increment"></generator>
+		</id>
+		<property name="cname"></property>
+		<property name="email" column="email"></property>
+		<property name="city" column="city" type="string"></property>
+		<property name="cardBal" column="cardBal" type="double"></property>
+		<property name="cardType"/>
+		<property name="cardNo" type="int"/>
+		<property name="status"/>
+	</class>
+	<!-- For Named Query its Uses SQL Queries (like Native Query) in XML-->
+	<sql-query name="AllCustomers">
+	<return class="Customer"/>
+	SELECT * FROM customers
+	</sql-query>
+	
+	<sql-query name="CustomersByCity">
+	<return class="Customer"/>
+	SELECT * FROM customers cust WHERE cust.city = ?
+	</sql-query>
+	
+	<sql-query name="CustomersByEmail">
+	<!-- <return class="Customer"/> --> 
+	<!-- 1) If query is retrieving only one single column the no need to specify <return> tag.-->
+	<!-- 2) Its converts ResultSet Records to Customer.class Object if we specified this <return> tag.-->
+	<!-- 3) If we didn't specify this <return> tag and we are retrieving multiple column data then One-One Record of ResultSet will convert to Object Type Array, means One Record = Object[] obj -->
+	SELECT * FROM customers cust WHERE cust.email = ?
+	</sql-query>
+	
+	<sql-query name="CustomersByCityAndStatus">
+	<return class="Customer"/>
+	SELECT * FROM customers cust WHERE cust.city = ? and cust.status = ?
+	</sql-query>
+	
+</hibernate-mapping>
